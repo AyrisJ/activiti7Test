@@ -16,6 +16,7 @@ import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.history.HistoricVariableInstance;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -39,7 +40,7 @@ public class HistoricController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/process")
+	@GetMapping(value = "/process")
 	@ResponseBody
 	public String historicProcess(HttpServletRequest request, HttpServletResponse response) {
 
@@ -72,7 +73,7 @@ public class HistoricController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/activity")
+	@GetMapping(value = "/activity")
 	@ResponseBody
 	public String historicActivity(HttpServletRequest request, HttpServletResponse response) {
 
@@ -109,7 +110,7 @@ public class HistoricController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/task")
+	@GetMapping(value = "/task")
 	@ResponseBody
 	public String historicTask(HttpServletRequest request, HttpServletResponse response) {
 
@@ -146,7 +147,7 @@ public class HistoricController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/variable")
+	@GetMapping(value = "/variable")
 	@ResponseBody
 	public String historicVariable(HttpServletRequest request, HttpServletResponse response) {
 

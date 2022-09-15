@@ -18,6 +18,7 @@ import org.activiti.engine.task.Task;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -45,7 +46,7 @@ public class TaskController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/query")
+	@GetMapping(value = "/query")
 	@ResponseBody
 	public String taskQuery(HttpServletRequest request, HttpServletResponse response) {
 
@@ -79,7 +80,7 @@ public class TaskController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/get")
+	@GetMapping(value = "/get")
 	@ResponseBody
 	public String getTask(HttpServletRequest request, HttpServletResponse response) {
 
@@ -122,7 +123,7 @@ public class TaskController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/list")
+	@GetMapping(value = "/list")
 	@ResponseBody
 	public String listTask(HttpServletRequest request, HttpServletResponse response) {
 
@@ -169,7 +170,7 @@ public class TaskController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/get/run")
+	@GetMapping(value = "/get/run")
 	@ResponseBody
 	public String getRun(HttpServletRequest request, HttpServletResponse response) {
 
@@ -204,7 +205,7 @@ public class TaskController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/complete")
+	@GetMapping(value = "/complete")
 	@ResponseBody
 	public String complete(HttpServletRequest request, HttpServletResponse response) {
 
@@ -251,7 +252,7 @@ public class TaskController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/assignee")
+	@GetMapping(value = "/assignee")
 	@ResponseBody
 	public String assignee(HttpServletRequest request, HttpServletResponse response) {
 
@@ -281,7 +282,7 @@ public class TaskController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/resolve")
+	@GetMapping(value = "/resolve")
 	@ResponseBody
 	public String resolve(HttpServletRequest request, HttpServletResponse response) {
 

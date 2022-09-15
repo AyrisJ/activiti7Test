@@ -19,6 +19,7 @@ import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -46,7 +47,7 @@ public class ProcessController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/deploy")
+	@GetMapping(value = "/deploy")
 	@ResponseBody
 	public String deploy(HttpServletRequest request, HttpServletResponse response) {
 
@@ -78,7 +79,7 @@ public class ProcessController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/deploy/zip")
+	@GetMapping(value = "/deploy/zip")
 	@ResponseBody
 	public String deployZip(HttpServletRequest request, HttpServletResponse response) {
 
@@ -115,7 +116,7 @@ public class ProcessController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/definition/query")
+	@GetMapping(value = "/definition/query")
 	@ResponseBody
 	public String processDefinition(HttpServletRequest request, HttpServletResponse response) {
 
@@ -164,7 +165,7 @@ public class ProcessController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/deployment/delete")
+	@GetMapping(value = "/deployment/delete")
 	@ResponseBody
 	public String deleteDeployment(HttpServletRequest request, HttpServletResponse response) {
 
@@ -196,7 +197,7 @@ public class ProcessController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/start")
+	@GetMapping(value = "/start")
 	@ResponseBody
 	public String start(HttpServletRequest request, HttpServletResponse response) {
 
@@ -238,7 +239,7 @@ public class ProcessController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/delete")
+	@GetMapping(value = "/delete")
 	@ResponseBody
 	public String deleteProcess(HttpServletRequest request, HttpServletResponse response) {
 
@@ -267,7 +268,7 @@ public class ProcessController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/instance/suspend")
+	@GetMapping(value = "/instance/suspend")
 	@ResponseBody
 	public String suspendProcessInstance(HttpServletRequest request, HttpServletResponse response) {
 
@@ -301,7 +302,7 @@ public class ProcessController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/definition/suspend")
+	@GetMapping(value = "/definition/suspend")
 	@ResponseBody
 	public String suspendProcessDefinition(HttpServletRequest request, HttpServletResponse response) {
 
@@ -334,7 +335,7 @@ public class ProcessController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/instance/activate")
+	@GetMapping(value = "/instance/activate")
 	@ResponseBody
 	public String activateProcessInstance(HttpServletRequest request, HttpServletResponse response) {
 
@@ -368,7 +369,7 @@ public class ProcessController extends BaseController {
 	 * @see [相关类/方法](可选)
 	 * @since [产品/模块版本](可选)
 	 */
-	@RequestMapping(value = "/definition/activate")
+	@GetMapping(value = "/definition/activate")
 	@ResponseBody
 	public String activateProcessDefinition(HttpServletRequest request, HttpServletResponse response) {
 
